@@ -12,9 +12,10 @@ Edits propagate implicitly: changing `CODE_OF_CONDUCT.md` here changes the displ
 
 Two distinct surfaces — do not confuse them:
 
-- **Repo root** (`README.md`, `LICENSE.txt`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `CODEOWNERS`, `FEATURE_OR_BUG.md`, `.editorconfig`) — community-health docs, served as defaults to other repos.
+- **Repo root** (`README.md`, `LICENSE.txt`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `FEATURE_OR_BUG.md`, `.editorconfig`) — community-health docs, served as defaults to other repos.
 - **`.github/` subdirectory** — config/automation for *this* repo only (does NOT propagate as defaults):
-  - `dependabot.yml` — github-actions ecosystem, PRs target `develop` branch
+  - `CODEOWNERS` — `@D3strukt0r` default; Dependabot-managed paths (`.github/workflows/`) also owned by `@Team-MaRo/CI` so the bot's auto-approval satisfies the code-owner requirement.
+  - `dependabot.yml` — github-actions ecosystem, grouped (all updates into one PR), weekly Monday schedule
   - `labeler.yml` — rules for `actions/labeler`
   - `ISSUE_TEMPLATE/` — bug + feature forms, `config.yml` disables blank issues
   - `PULL_REQUEST_TEMPLATE/default.md` — currently empty
